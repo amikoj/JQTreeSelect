@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="keywords" content="jquery,plugin,jquery插件" />
+  <meta name="description" content="jquery插件"/>
+  <title>TreeSelect-Jquery插件</title>
+  
+
+
+
+</head>
+
+<body>
+
+ 
+            <tr>
+              <td class="required">
+                <label>户籍所在地：</label>
+              </td>
+              <td colspan="3">
+                <div id="household" class="form-item required half-distpicker required pick-area pick-area1" name="请选择"
+                  data-message="请选择完整户籍地址">
+                </div>
+                <div class="form-item required" data-valid="notempty" data-message="请填写户籍详细地址">
+                  <input type="text" name="household_desc" class="match" placeholder="请填写详细地址" />
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="required">
+                <label>户口性质：</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="请选择户口性质">
+                  <select name="hukou" class="match" aria-placeholder="请选择">
+                    <option value="0">农业户口</option>
+                    <option value="1">非农业户口</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="required">
+                <label>通讯地址：</label>
+              </td>
+              <td colspan="3">
+                <div id="address" class="form-item required half-distpicker required pick-area pick-area1" name="请选择"
+                  data-message="请选择完整通讯地址">
+                </div>
+                <div class="form-item required" data-valid="notempty" data-message="通讯详细地址不能为空">
+                  <input type="text" name="address_desc" class="match" placeholder="请填写详细地址" />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="required">
+                <label>毕业院校：</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="最高学历毕业院校不能为空">
+                  <input type="text" class="match" name="school" placeholder="请填写您的最高学历毕业院校" />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="required">
+                <label>毕业时间：</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="毕业时间不能为空">
+                  <input type="text" placeholder="请选择您的毕业时间" name="graduation_time" class="match datetime">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="required">
+                <label>专业：</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="专业不能为空">
+                  <input type="text" name="pro" maxlength="50" class="match" placeholder="请填写您的专业" />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="required">
+                <label>学历：</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="最高学历不能为空">
+                  <select class="match" name="degree" aria-placeholder="请选择您的最高学历">
+                    <option value="0">小学</option>
+                    <option value="1">初中</option>
+                    <option value="2">高中/中技/中专</option>
+                    <option value="3">大专</option>
+                    <option value="4">本科</option>
+                    <option value="5">硕士研究生</option>
+                    <option value="6">博士研究生</option>
+                    <option value="7">无</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="required">
+                <label>学位：</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="最高学位不能为空">
+                  <select class="match" name="academic" aria-placeholder="请选择您的最高学位">
+                    <option value="0">学士</option>
+                    <option value="1">硕士</option>
+                    <option value="2">博士</option>
+                    <option value="3">无</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="company-address-tr">
+              <td class="required">
+                <label>前单位所在地:</label>
+              </td>
+              <td colspan="3">
+                <div id="company_address" class="form-item required half-distpicker  pick-area pick-area1"
+                  data-message="请选择完整的单位地址" name="请选择">
+                </div>
+
+                <div class="form-item required" data-valid="notempty" data-message="单位详细地址不能为空">
+                  <input type="text" name="company_address_desc" class="match" placeholder="请填写详细地址" />
+                </div>
+              </td>
+            </tr>
+
+            <tr class="company-name-tr">
+              <td class="required">
+                <label>工作单位名称:</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="工作单位名称不能为空">
+                  <input type="text" name="company_name" class="match" placeholder="请填写您最近的工作单位名称" />
+                </div>
+              </td>
+            </tr>
+
+            <tr class="company-type-tr">
+              <td class="required">
+                <label>单位性质</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="单位性质不能为空">
+                  <select name="company_type" class="match" aria-placeholder="请选择您最近的单位性质">
+                    <option value="0">国企</option>
+                    <option value="1">外企</option>
+                    <option value="2">私企</option>
+                    <option value="3">事业单位</option>
+                    <option value="4">国家机关</option>
+                    <option value="5">其他</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr class="company-frm-tr">
+              <td class="required">
+                <label>职务:</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="职务不能为空">
+                  <input name="company_frm" type="text" class="match" placeholder="请填写您在最近工作单位的职务" />
+                </div>
+              </td>
+            </tr>
+
+
+            <tr class="computer-lever-tr">
+              <td class="required">
+                <label>计算机水平:</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="计算机水平不能为空">
+                  <input type="text" name="computer_lever" class="match" placeholder="请填写您的计算机水平，例如计算机二级" />
+                </div>
+              </td>
+            </tr>
+
+            <tr class="foreign-languages-tr">
+              <td class="required">
+                <label>外语水平:</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="外语水平不能为空">
+                  <input type="text" name="foreign_languages_level" class="match" placeholder="请填写您的外语水平，例如英语专业四级" />
+                </div>
+              </td>
+            </tr>
+
+            <tr class="qualification-tr">
+              <td class="required">
+                <label>执业资格:</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="执业资格不能为空">
+                  <input type="text" name="qualification" class="match" placeholder="请填写您的执业资格，例如注册会计师" />
+                </div>
+              </td>
+            </tr>
+
+            <tr class="retire-soldier-tr">
+              <td class="required">
+                <label>是否是退伍军人:</label>
+              </td>
+              <td>
+                <div class="form-item required" style="font-size:.14rem;" data-valid="notempty" data-message="不能为空">
+                  <input name="is_retire_soldier" type="radio" value="1" />是
+                  <input name="is_retire_soldier" type="radio" value="2" />否
+                </div>
+              </td>
+            </tr>
+
+            <tr class="honor-tr">
+              <td class="required">
+                <label class="required">奖惩情况:</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="奖惩情况不能为空">
+                  <textarea name="honor" maxlength="200" rows="4" style="width: 100%;"
+                    placeholder="例如荣获安徽xx集团2019年个人先进奖"></textarea>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="medical-tr">
+              <td class="required">
+                <label>既往病史:</label>
+              </td>
+              <td colspan="3">
+                <div class="form-item required" data-valid="notempty" data-message="既往病史不能为空">
+                  <textarea maxlength="200" name="medical_history" rows="4" style="width: 100%;"
+                    placeholder="若无病史请填无，若有，请照实填写"></textarea>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="study_experience-tr top-tr">
+              <td class="required">
+                <label>学习经历:</label>
+              </td>
+              <td colspan="3" data-message="学习经历不能为空,每个单元格限25字内">
+                <label class="mark">注：从高中的学习经历开始填写</label>
+                <table id="study_experience-table" class="input-table study_experience-table" cellspacing='0'
+                  cellpadding='0'>
+                  <thead>
+                    <tr>
+                      <th>
+                        起止时间
+                      </th>
+                      <th>毕业院校</th>
+                      <th>学历</th>
+                      <th>专业</th>
+                      <th style="min-width:.6rem;"> 操作</th>
+                    </tr>
+                  </thead>
+                  <thead>
+                  </thead>
+                </table>
+              </td>
+            </tr>
+
+            <tr class="experience-tr top-tr">
+              <td class="required">
+                <label class="required">社会工作经历:</label>
+              </td>
+              <td colspan="3" data-message="社会工作经历不能为空,每个单元格限25字内">
+                <label class="mark">注:从最近的工作经历开始填写</label>
+                <table id="experience-table" class="input-table experience-table" cellspacing='0' cellpadding='0'>
+                  <thead>
+                    <tr>
+                      <th><label class="required">起止时间</label></th>
+                      <th><label class="required">公司名称</label></th>
+                      <th>职位</th>
+                      <th>工作描述</th>
+                      <th style="min-width:.6rem;"> 操作</th>
+                    </tr>
+                  </thead>
+                  <thead>
+
+                  </thead>
+                </table>
+              </td>
+            </tr>
+
+            <tr class="family-tr top-tr">
+              <td class="required">
+                <label class="required">家庭成员情况:</label>
+              </td>
+              <td colspan="3" data-message="家庭成员情况不能为空,每个单元格限25字内">
+                <table id="family-table" class="input-table family-table" cellspacing='0' cellpadding='0'>
+                  <thead>
+                    <tr>
+                      <th>姓名</th>
+                      <th>关系</th>
+                      <th>工作单位及职务</th>
+                      <th style="min-width:.6rem;"> 操作</th>
+                    </tr>
+                  </thead>
+                  <thead>
+                  </thead>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <div class="entered-step-content-btns">
+            <div class="set_2_button color2 set_2_btn-1 icon-backward back-btn"><span>上一步</span></div>
+            <div class="set_2_button color1 set_2_btn-1 icon-forward next-btn"><span>保存，并下一步</span></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/js/libs/jquery-3.4.1.min.js"></script>
+  <script src="/assets/js/scroll/zUI.js"></script>
+  <!-- <script src="/js/libs/es6-promise.auto.min.js"></script> -->
+  <script src="/js/component/header.js"></script>
+  <script src="/js/component/footer.js?v=1.0"></script>
+  <!-- <script src="/js/libs/browser.min.js"></script> -->
+  <script src="/js/utils/request.js"></script>
+  <script src="/js/utils/public.js" ></script>
+  <!--按顺序-->
+
+  <script src="/js/foundation-datepicker.js"></script>
+  <script src="/js/locales/foundation-datepicker.zh-CN.js"></script>
+  <script src="/js/libs/jquery.toast.js"></script>
+  <script src="/js/distpicker.data.js"></script>
+  <script src="/js/distpicker.js"></script>
+  <script  src="/js/data.js"></script>
+  <script  src="/js/libs/tree-select.js"></script>
+  <script src="/js/select.js"></script>
+
+  <script src="basic.js?v=1.2"></script>
+</body>
+
+</html>

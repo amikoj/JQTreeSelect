@@ -1,0 +1,32 @@
+{
+    "name": "TreeSelect",
+    "title": "jQuery TreeSelect",
+    "description": "jQuery plugin for Tree Select.",
+    "keywords": [
+        "Select",
+        "TreeSelect",
+        "element-ui"
+    ],
+    "version": "1.0.0",
+    "author": "caihaifei",
+    "maintainers": [
+        {
+            "name": "caihaifei",
+            "email": "1710600212@qq.com",
+            "url": "http://www.enjoytoday.cn"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/amikoj/JQTreeSelect/blob/main/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/amikoj/JQTreeSelect/issues",
+    "homepage": "https://github.com/amikoj/JQTreeSelect",
+    "docs": "https://github.com/amikoj/JQTreeSelect",
+    "download": "https://github.com/amikoj/JQTreeSelect/tree/main/dest",
+    "dependencies": {
+        "jquery": ">=1.11.3"
+    }
+}
